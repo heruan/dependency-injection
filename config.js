@@ -1,10 +1,18 @@
 System.config({
   defaultJSExtensions: true,
+  transpiler: "babel",
+  babelOptions: {
+    "optional": [
+      "runtime",
+      "optimisation.modules.system"
+    ]
+  },
   paths: {
     "github:*": "jspm_packages/github/*",
     "aurelia-dependency-injection/*": "dist/*",
     "npm:*": "jspm_packages/npm/*"
   },
+
   map: {
     "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1.1.1",
     "aurelia-metadata": "npm:aurelia-metadata@1.0.0-rc.1.0.0",
